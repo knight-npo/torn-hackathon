@@ -1,0 +1,45 @@
+{{ include('@main/header.html.twig') }}
+
+<div class="container-fluid gx-0">
+    <div class="header-title shadow p-3">
+        <h2 class="pt-1 ps-3">Points Market</h2>
+    </div>
+    <div class="container mt-2">
+        <div class="row mt-4">
+            <table id="point-market-table" class="point-market-table" data-toggle="table" data-classes="table table-dark table-striped table-hover" style="display:none">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col" class="col-1" data-sortable="true">Bulk</th>
+                    <th scope="col" data-sortable="true" data-field="quantity">Quantity</th>
+                    <th scope="col" data-sortable="true" data-field="cost">Price</th>
+                    <th scope="col" data-sortable="true" data-field="totalCost">Total Price</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for market in pointsMarket %}
+                        <tr>
+                            <td>
+                                {% if market.quantity >= 1000 %}
+                                    <i class="bi bi-check-circle ps-3 bulk"></i>
+                                {% else %}
+                                    <i class="bi bi-x-circle ps-3 nobulk"></i>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {{ market.quantity }}
+                            </td>
+                            <td>
+                                {{ market.cost }}
+                            </td>
+                            <td>
+                                {{ market.totalCost }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{{ include('@main/footer.html.twig') }}

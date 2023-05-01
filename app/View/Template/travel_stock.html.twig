@@ -1,0 +1,56 @@
+{{ include('@main/header.html.twig') }}
+
+<div class="container-fluid gx-0">
+    <div class="header-title shadow p-3">
+        <h2 class="pt-1 ps-3">Travel Stock</h2>
+    </div>
+    <div class="container mt-2">
+        <div class="d-flex justify-content-center">
+            <ul class="nav nav-underline" id="nav-countries" style="display: none;">
+                {% for key, countryStock in stocks %}
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" data-country="{{ countryStock.country }}">{{ countryStock.countryName }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row mt-4">
+            {% for key, countryStock in stocks %}
+                <table id="stock-table-{{ countryStock.country }}" class="stock-table" data-toggle="table" data-classes="table table-dark table-striped table-hover" style="display:none">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col" data-sortable="true" data-field="itemName">Item</th>
+                        <th scope="col" data-sortable="false" data-field="country">Country</th>
+                        <th scope="col" data-sortable="true" data-field="cost">Price</th>
+                        <th scope="col" data-sortable="true" data-field="quantity">Stock</th>
+                        <th scope="col">Updated</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        {% for item in countryStock.items %}
+                            <tr>
+                                <td class="ps-4">
+                                    {{ item.itemName }}
+                                </td>
+                                <td>
+                                    {{ countryStock.countryName }}
+                                </td>
+                                <td>
+                                    {{ item.cost }}
+                                </td>
+                                <td>
+                                    {{ item.quantity }}
+                                </td>
+                                <td>
+                                    {{ countryStock.updated }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{{ include('@main/footer.html.twig') }}

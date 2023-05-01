@@ -1,0 +1,22 @@
+{
+    "name": "npo/torn-hackathon",
+    "description": "Torn Hackathon",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "NPO\\TornHackathon\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Knight",
+            "email": "knight.npo@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}

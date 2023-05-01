@@ -1,0 +1,6 @@
+/vendor/
+/tools/
+*.ini
+*.pem
+*.cache
+/*cache/

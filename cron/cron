@@ -1,0 +1,2 @@
+* * * * * bash -lc "/usr/local/bin/php /var/www/html/app/Cron/CronTravelStock.php >> /home/root/logs/travel_stock.log 2>&1"
+* * * * * bash -lc "/usr/local/bin/php /var/www/html/app/Cron/CronPointMarket.php >> /home/root/logs/points_market.log 2>&1"

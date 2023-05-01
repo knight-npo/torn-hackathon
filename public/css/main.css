@@ -1,0 +1,54 @@
+.table-striped {
+    color: #e5e1db;
+}
+.header-title h2 {
+    font-weight: 600;
+    font-size: 1.775rem
+}
+
+.main-nav {
+    background-color: black;
+}
+
+.nav-pills .nav-link{
+    color: rgb(45, 145, 253) !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: darkgrey;
+    color: rgb(0, 0, 0) !important;
+}
+
+.nav-pills .nav-link.disabled {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.nav-pills .nav-link:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav:not(.nav-pills) .nav-item .nav-link.active {
+    color: rgb(45, 145, 253) !important;
+    font-weight: 400 !important;
+}
+
+.nav:not(.nav-pills) .nav-item a.nav-link.active:hover {
+    color: rgb(45, 145, 253) !important;
+}
+
+.nav:not(.nav-pills) .nav-item .nav-link {
+    color: rgb(208, 198, 184) !important;
+}
+
+.nav:not(.nav-pills) .nav-item a.nav-link:hover {
+    color: rgb(229, 235, 240) !important;
+}
+
+.nobulk {
+    color: red;
+}
+
+.bulk {
+    color: green;
+}
