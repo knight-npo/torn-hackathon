@@ -27,11 +27,11 @@ class Config {
         return getenv("DB_NAME");
     }
 
-    public function getUpdateInterval() {
-        return getenv("UPDATE_INTERVAL");
-    }
-
     public function getAPIKey() {
         return getenv("API_KEY");
+    }
+
+    public function getBasePath() {
+        return getenv("BASE_PATH");
     }
 }
